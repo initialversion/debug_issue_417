@@ -9,6 +9,10 @@ class ClassComment < ApplicationRecord
 
   # Indirect associations
 
+  has_one    :student,
+             :through => :class_member,
+             :source => :student
+
   # Validations
 
 end
